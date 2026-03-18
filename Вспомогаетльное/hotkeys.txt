@@ -21,10 +21,22 @@
   Ctrl + Alt + Shift + J - выделить ВСЕ одинаковые слова в файле
   Alt + J - выделить следующее вхождение (можно нажимать несколько раз)
 
+
+
 Команды в терминале:
+
     pip freeze > requirements.txt
     .venv\Scripts\activate
     Deactivate
+
+
+
+
+
+
+
+
+
 
 
 
