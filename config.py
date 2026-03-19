@@ -13,5 +13,5 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 SITE_API_KEY = os.getenv("SITE_API_KEY")
 API_HOST = "https://api.kinopoisk.dev/v1.4"
-API_TIMEOUT = 10
+API_TIMEOUT = 60
 

@@ -1,8 +1,8 @@
 import requests
+import json
 from config import API_HOST, SITE_API_KEY, API_TIMEOUT
 
 headers = {"X-API-KEY": SITE_API_KEY}
-
 
 def get_move_by_name(move_name: str, page=1, limit=1):
     """Поиск по названию"""
@@ -23,7 +23,7 @@ def get_move_by_name(move_name: str, page=1, limit=1):
         return None
 
     except requests.Timeout:
-        print("⏰ Превышено время ожидания")
+        print("⏰ Превышено время ожидания от API")
         return None
 
     except requests.ConnectionError:
@@ -31,7 +31,7 @@ def get_move_by_name(move_name: str, page=1, limit=1):
         return None
 
     except Exception as e:
-        print(f"❌ Неожиданная ошибка: {e}")
+        print(f"❌ Неожиданная ошибка от API: {e}")
         return None
 
 
@@ -47,3 +47,10 @@ if __name__ == "__main__":
         print(f"✅ Найдено фильмов: {len(result)}")
         print(f"Первый результат: {result[0].get('name', 'Без названия')}")
         print(result)
+
+
+
+
+
+# with open('структура.txt', 'w', encoding='utf-8') as file:
+#     file.write(json.dumps(result, ensure_ascii=False, indent=2))

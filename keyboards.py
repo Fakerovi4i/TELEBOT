@@ -6,8 +6,10 @@ def main_menu_keyboard():
     """Главное меню"""
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add("🔍 Поиск фильма", "🎭 По жанру")
-    keyboard.add("⭐ Топ фильмов", "ℹ️ Помощь")
+    keyboard.add("⭐ Топ фильмов", "Поиск по фильтрам")
     return keyboard
+
+
 
 
 # def get_genre_keyboard():
