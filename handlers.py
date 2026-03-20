@@ -1,13 +1,17 @@
+from typing import List, Dict, Any
+import json
 from telebot.types import Message
+
 from bot import bot
 from keyboards import keyboard_main_menu
 from api_requests import get_move_by_name
 
 
-def info_about_move(data: list[dict]):
-    name = data[0]["name"]
-    poster = data[0]["poster"]["previewUrl"]
-    kp_rate = data[0]["rating"]["kp"]
+
+def info_about_move(data: Dict[str, Any]):
+    name = data["name"]
+    poster = data["poster"]["previewUrl"]
+    kp_rate = data["rating"]["kp"]
     return name, poster, kp_rate
 
 
@@ -42,6 +46,7 @@ def register_handlers():
     def process_find_move(message: Message):
         name = message.text
         result = get_move_by_name(name)
+        # print(json.dumps(result, ensure_ascii=False, indent=2))
         if result is None:
             bot.send_message(message.chat.id, 'Произошла ошибка обращения к сайту!\nПопробуйте позже.', reply_markup=keyboard_main_menu)
             return
@@ -50,12 +55,13 @@ def register_handlers():
             return
 
         try:
-            movie_name, poster, kp_rate  = info_about_move(result)
-            bot.send_photo(
-                message.chat.id,
-                photo=poster,
-                caption=f"""🎬 {movie_name}\nРейтинг КиноПоиск: {kp_rate:.1f}""" #reply_markup = keyboard_main_menu
-            )
+            for movie in result:
+                movie_name, poster, kp_rate  = info_about_move(movie)
+                bot.send_photo(
+                    message.chat.id,
+                    photo=poster,
+                    caption=f"""🎬 {movie_name}\nРейтинг КиноПоиск: {kp_rate:.1f}""" #reply_markup = keyboard_main_menu
+                )
 
         except (KeyError, IndexError) as e:
             bot.send_message(message.chat.id, 'Ошибка при получении данных о фильме!', reply_markup=keyboard_main_menu)

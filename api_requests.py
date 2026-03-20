@@ -4,11 +4,11 @@ from config import API_HOST, SITE_API_KEY, API_TIMEOUT
 
 headers = {"X-API-KEY": SITE_API_KEY}
 
-def get_move_by_name(move_name: str, page=1, limit=1):
+def get_move_by_name(move_name: str, page=1, limit=5):
     """Поиск по названию"""
     try:
         url = f"{API_HOST}/movie/search"
-        params = {"query": move_name, "limit": limit}
+        params = {"query": move_name, "page": page, "limit": limit}
         response = requests.get(
             url,
             headers=headers,
