@@ -1,0 +1,79 @@
+[
+  {
+    "id": 2213,
+    "name": "Титаник",
+    "alternativeName": "Titanic",
+    "enName": "",
+    "type": "movie",
+    "year": 1997,
+    "description": "Апрель 1912 года. В первом и последнем плавании шикарного «Титаника» встречаются двое. Пассажир нижней палубы Джек выиграл билет в карты, а богатая наследница Роза отправляется в Америку, чтобы выйти замуж по расчёту. Чувства молодых людей только успевают расцвести, и даже не классовые различия создадут испытания влюблённым, а айсберг, вставший на пути считавшегося непотопляемым лайнера.",
+    "shortDescription": "Запретная любовь на фоне гибели легендарного лайнера. Великий фильм-катастрофа — в отреставрированной версии",
+    "movieLength": 194,
+    "isSeries": false,
+    "ticketsOnSale": false,
+    "ratingMpaa": "pg13",
+    "ageRating": 12,
+    "top250": 41,
+    "typeNumber": 1,
+    "names": [
+      {
+        "name": "Титаник",
+        "language": "RU",
+        "type": "Russian title on kinopoisk"
+      },
+      {
+        "name": "Titanic",
+        "language": null,
+        "type": "Original title on kinopoisk"
+      }
+    ],
+    "externalId": {
+      "kpHD": "467e936285361ab78c3ed4061d3cc363",
+      "imdb": "tt0120338",
+      "tmdb": 597
+    },
+    "logo": {
+      "url": "https://image.tmdb.org/t/p/original/pfaZhIXrJQmfsMTxrC3o7kTHBuD.png",
+      "previewUrl": "https://image.tmdb.org/t/p/w500/pfaZhIXrJQmfsMTxrC3o7kTHBuD.png"
+    },
+    "poster": {
+      "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/7f0e6761-4635-46ad-b804-59d5cf1ae85c/600x900",
+      "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/7f0e6761-4635-46ad-b804-59d5cf1ae85c/300x450"
+    },
+    "backdrop": {
+      "url": "https://avatars.mds.yandex.net/get-ott/200035/2a00000161288210c88a7eb838405d44fd9d/1344x756",
+      "previewUrl": "https://avatars.mds.yandex.net/get-ott/200035/2a00000161288210c88a7eb838405d44fd9d/678x380"
+    },
+    "rating": {
+      "kp": 8.388,
+      "imdb": 8,
+      "filmCritics": 8.4,
+      "russianFilmCritics": 0,
+      "await": 0
+    },
+    "votes": {
+      "kp": 938545,
+      "imdb": 1400000,
+      "filmCritics": 255,
+      "russianFilmCritics": 0,
+      "await": 0
+    },
+    "genres": [
+      {
+        "name": "мелодрама"
+      },
+      {
+        "name": "триллер"
+      },
+      {
+        "name": "драма"
+      }
+    ],
+    "countries": [
+      {
+        "name": "США"
+      }
+    ],
+    "releaseYears": []
+  }
+]

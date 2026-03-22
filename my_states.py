@@ -1,3 +1,8 @@
-from telebot.handler_backends import State,  StatesGroup
-from telebot.storage import StateMemoryStorage
-from telebot import custom_filters
+from telebot.handler_backends import State, StatesGroup
+
+
+
+class ChoiceFilters(StatesGroup):
+   waiting_filters = State()
+   waiting_year = State()
+
